@@ -23,15 +23,15 @@ void	sort_stack(t_stack_node **a, t_stack_node **b)
 		sa(a);
 	else if (stack_size == 3)
 		sort_three(a);
-	else
-	 	turk_sort(a, b);
+	// else
+	//  	turk_sort(a, b);
 }
 
 void	sort_three(t_stack_node **a)
 {
-	if (find_max(*a) == (*a)->value)
+	if (find_max(*a)->value == (*a)->value)
 		ra(a);
-	else if (find_max(*a) == (*a)->next->value)
+	else if (find_max(*a)->value == (*a)->next->value)
 		rra(a);
 	if ((*a)->value > (*a)->next->value)
 		sa(a);

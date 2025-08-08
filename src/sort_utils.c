@@ -12,36 +12,36 @@
 
 #include "push_swap.h"
 
-int		find_min(t_stack_node *stack)
+t_stack_node	*find_min(t_stack_node *stack)
 {
-	int				nbr;
+	t_stack_node	*min;
 	t_stack_node	*p;
 
-	nbr = stack->value;
+	min = stack;
 	p = stack;
 	while (p)
 	{
-		if (nbr > p->value)
-			nbr = p->value;
+		if (min->value > p->value)
+			min = p;
 		p = p->next;
 	}
-	return (nbr);
+	return (min);
 }
 
-int		find_max(t_stack_node *stack)
+t_stack_node	*find_max(t_stack_node *stack)
 {
-	int				nbr;
+	t_stack_node	*max;
 	t_stack_node	*p;
 
-	nbr = stack->value;
+	max = stack;
 	p = stack;
-	while(p)
+	while (p)
 	{
-		if (nbr < p->value)
-			nbr = p->value;
+		if (max->value < p->value)
+			max = p;
 		p = p->next;
 	}
-	return (nbr);
+	return (max);
 }
 
 int		is_sorted(t_stack_node *a)

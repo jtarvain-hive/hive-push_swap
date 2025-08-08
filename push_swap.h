@@ -39,11 +39,21 @@ void			rrr(t_stack_node **a, t_stack_node **b);
 
 // Sorting
 void			sort_stack(t_stack_node **a, t_stack_node **b);
-void			sort_two(t_stack_node **a);
 void			sort_three(t_stack_node **a);
 int				is_sorted(t_stack_node *a);
 int				stack_len(t_stack_node *a);
-int				find_max(t_stack_node *stack);
+t_stack_node	*find_max(t_stack_node *stack);
+t_stack_node	*find_min(t_stack_node *stack);
+
+// Turk sort
+void			turk_sort(t_stack_node **a, t_stack_node **b);
+void			current_index(t_stack_node *stack);
+void			set_target_a(t_stack_node *a, t_stack_node *b);
+void			init_nodes_a(t_stack_node *a, t_stack_node *b);
+void			init_nodes_b(t_stack_node *a, t_stack_node *b);
+void			move_to_b(t_stack_node **a, t_stack_node **b);
+void			move_to_a(t_stack_node **a, t_stack_node **b);
+void			cost_analysis(t_stack_node *a, t_stack_node *b);
 
 // Parsing
 t_stack_node	*parse_string_input(char *av);
